@@ -5,7 +5,7 @@ class ThemeNotifier with ChangeNotifier {
 
   String thm = "B";
 
-  static final ThemeData lightTheme = ThemeData(
+  static ThemeData lightTheme = ThemeData(
     textTheme: const TextTheme(
         headline4: TextStyle(
           fontWeight: FontWeight.w600,
@@ -29,7 +29,7 @@ class ThemeNotifier with ChangeNotifier {
 
   );
 
-  static final ThemeData darkTheme = ThemeData(
+  static ThemeData darkTheme = ThemeData(
     textTheme: TextTheme(
         headline1: GoogleFonts.kumbhSans(
           fontWeight: FontWeight.w500,
