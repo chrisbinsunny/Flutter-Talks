@@ -4,9 +4,9 @@ import 'package:flutter_talks/sizes.dart';
 
 
 class Base1 extends StatelessWidget {
-  const Base1({Key? key, required this.body}) : super(key: key);
+  const Base1({Key? key, required this.children}) : super(key: key);
 
-  final Widget body;
+  final List<Widget> children;
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +18,19 @@ class Base1 extends StatelessWidget {
         ),
       ),
 
-      body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: screenWidth(context, mulBy: 0.05)
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: screenWidth(context, mulBy: 0.05),
+            vertical: screenHeight(context, mulBy: 0.1)
         ),
-        child: body,
-      ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: children,
+          ),
+        ),
+      )
     );
   }
 }
