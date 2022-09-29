@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_talks/base/base1.dart';
+import 'package:flutter_talks/sizes.dart';
+import 'package:flutter_talks/widgets.dart';
 
 class Slide1 extends StatefulWidget {
   const Slide1({Key? key}) : super(key: key);
@@ -21,9 +23,35 @@ class _Slide1State extends State<Slide1> {
             style: Theme.of(context).textTheme.headline1
           ),
           Text(
-              "Building beautiful native apps in record time",
+              "Of the devs, by the devs and for the devs",
               style: Theme.of(context).textTheme.headline2
           ),
+          SizedBox(
+            height: screenHeight(context, mulBy: 0.01),
+          ),
+          underline(),
+          Row(
+            children: [
+              Container(
+                height: 320,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black38,
+                      blurRadius: 10,
+                      spreadRadius: 5,
+                      offset: Offset(0, 3)
+                    )
+                  ],
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(
+                  "assets/chrisbin.jpg",
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );
