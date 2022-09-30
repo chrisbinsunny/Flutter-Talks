@@ -10,6 +10,7 @@ class Base2 extends StatelessWidget {
 
   final List<Widget> children;
   final String head;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
