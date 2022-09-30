@@ -4,6 +4,8 @@ import 'package:flutter_talks/sizes.dart';
 import 'package:flutter_talks/widgets.dart';
 import 'dart:html' as html;
 
+import '../base/base2.dart';
+
 
 class Slide2 extends StatefulWidget {
   const Slide2({Key? key}) : super(key: key);
@@ -15,19 +17,9 @@ class Slide2 extends StatefulWidget {
 class _Slide2State extends State<Slide2> {
   @override
   Widget build(BuildContext context) {
-    return Base1(
+    return Base2(
+      head: "Flutter is Google’s UI Framework",
       children: [
-        Text(
-            "Flutter is Google’s UI Framework",
-            style: Theme.of(context).textTheme.displayMedium
-        ),
-        SizedBox(
-          height: screenHeight(context, mulBy: 0.01),
-        ),
-        underline(),
-        SizedBox(
-          height: screenHeight(context, mulBy: 0.1),
-        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
