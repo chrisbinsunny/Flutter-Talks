@@ -4,6 +4,8 @@ import 'package:flutter_talks/sizes.dart';
 import 'package:flutter_talks/widgets.dart';
 import 'dart:html' as html;
 
+import '../base/base2.dart';
+
 
 class Slide3 extends StatefulWidget {
   const Slide3({Key? key}) : super(key: key);
@@ -15,18 +17,11 @@ class Slide3 extends StatefulWidget {
 class _Slide3State extends State<Slide3> {
   @override
   Widget build(BuildContext context) {
-    return Base1(
+    return Base2(
+      head: "All time challenges of mobile development",
       children: [
-        Text(
-            "All time challenges of mobile development",
-            style: Theme.of(context).textTheme.headline2
-        ),
         SizedBox(
-          height: screenHeight(context, mulBy: 0.01),
-        ),
-        underline(),
-        SizedBox(
-          height: screenHeight(context, mulBy: 0.15),
+          height: screenHeight(context, mulBy: 0.05),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -39,7 +34,7 @@ class _Slide3State extends State<Slide3> {
                 children: [
                   Text(
                     "      “To the metal” approaches",
-                    style: Theme.of(context).textTheme.headline3?.copyWith(
+                    style: Theme.of(context).textTheme.displaySmall?.copyWith(
                         color: Colors.blueGrey,
                     ),
                   ),
@@ -63,7 +58,7 @@ class _Slide3State extends State<Slide3> {
                 children: [
                   Text(
                     "      “Cross platform” approaches",
-                    style: Theme.of(context).textTheme.headline3?.copyWith(
+                    style: Theme.of(context).textTheme.displaySmall?.copyWith(
                       color: Colors.blueGrey,
                     ),
                   ),
