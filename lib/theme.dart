@@ -47,9 +47,9 @@ class ThemeNotifier with ChangeNotifier {
         color: Colors.blueAccent,
       ),
       bodyText1: GoogleFonts.roboto(
-        fontWeight: FontWeight.w300,
+        fontWeight: FontWeight.w400,
         fontSize: 35,
-        color: const Color(0xff595959),
+        color: Color(0xff868686),
       )
 
     ),
