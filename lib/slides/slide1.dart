@@ -19,11 +19,11 @@ class _Slide1State extends State<Slide1> {
       children: [
         Text(
             "Flutter",
-            style: Theme.of(context).textTheme.headline1
+            style: Theme.of(context).textTheme.displayLarge
         ),
         Text(
             "Of the devs, by the devs and for the devs",
-            style: Theme.of(context).textTheme.headline2
+            style: Theme.of(context).textTheme.displayMedium
         ),
         SizedBox(
           height: screenHeight(context, mulBy: 0.01),
@@ -65,7 +65,7 @@ class _Slide1State extends State<Slide1> {
                 children: [
                   Text(
                       "Chrisbin Sunny",
-                      style: Theme.of(context).textTheme.headline3
+                      style: Theme.of(context).textTheme.displaySmall
                   ),
                   TextButton(
                       onPressed: (){
@@ -78,7 +78,7 @@ class _Slide1State extends State<Slide1> {
                       ),
                       child: Text(
                           "bio.link/chrisbin",
-                        style: Theme.of(context).textTheme.headline3?.copyWith(
+                        style: Theme.of(context).textTheme.displaySmall?.copyWith(
                             color: Colors.blueGrey,
                           fontSize: 25
                         ),
