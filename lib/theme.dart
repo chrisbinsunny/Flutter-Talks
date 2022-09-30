@@ -52,10 +52,15 @@ class ThemeNotifier with ChangeNotifier {
         color: Color(0xff868686),
       ),
       labelLarge: GoogleFonts.roboto(
-        fontWeight: FontWeight.w400,
-        fontSize: 35,
+        fontWeight: FontWeight.bold,
+        fontSize: 25,
         color: Color(0xff868686),
       ),
+      labelSmall: GoogleFonts.roboto(
+        fontWeight: FontWeight.normal,
+        fontSize: 25,
+        color: Color(0xff868686),
+      )
     ),
     fontFamily: "SF",
     primarySwatch: Colors.deepOrange,
