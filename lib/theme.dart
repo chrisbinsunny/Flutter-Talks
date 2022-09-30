@@ -37,8 +37,8 @@ class ThemeNotifier with ChangeNotifier {
           color: Colors.blueAccent,
         ),
         headline2: GoogleFonts.kumbhSans(
-          fontWeight: FontWeight.w500,
-          fontSize: 50,
+          fontWeight: FontWeight.w400,
+          fontSize: 45,
           color: Colors.blueAccent,
         ),
       headline3: GoogleFonts.kumbhSans(
@@ -46,6 +46,11 @@ class ThemeNotifier with ChangeNotifier {
         fontSize: 35,
         color: Colors.blueAccent,
       ),
+      bodyText1: GoogleFonts.roboto(
+        fontWeight: FontWeight.w300,
+        fontSize: 35,
+        color: const Color(0xff595959),
+      )
 
     ),
     fontFamily: "SF",
