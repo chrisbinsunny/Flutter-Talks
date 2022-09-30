@@ -31,27 +31,31 @@ class ThemeNotifier with ChangeNotifier {
 
   static ThemeData darkTheme = ThemeData(
     textTheme: TextTheme(
-        headline1: GoogleFonts.kumbhSans(
+        displayLarge: GoogleFonts.kumbhSans(
           fontWeight: FontWeight.w500,
           fontSize: 140,
           color: Colors.blueAccent,
         ),
-        headline2: GoogleFonts.kumbhSans(
+        displayMedium: GoogleFonts.kumbhSans(
           fontWeight: FontWeight.w400,
           fontSize: 45,
           color: Colors.blueAccent,
         ),
-      headline3: GoogleFonts.kumbhSans(
+      displaySmall: GoogleFonts.kumbhSans(
         fontWeight: FontWeight.w300,
         fontSize: 35,
         color: Colors.blueAccent,
       ),
-      bodyText1: GoogleFonts.roboto(
+      bodyMedium: GoogleFonts.roboto(
         fontWeight: FontWeight.w400,
         fontSize: 35,
         color: Color(0xff868686),
-      )
-
+      ),
+      labelLarge: GoogleFonts.roboto(
+        fontWeight: FontWeight.w400,
+        fontSize: 35,
+        color: Color(0xff868686),
+      ),
     ),
     fontFamily: "SF",
     primarySwatch: Colors.deepOrange,
