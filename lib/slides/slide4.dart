@@ -24,66 +24,12 @@ class _Slide4State extends State<Slide4> {
         SizedBox(
           height: screenHeight(context, mulBy: 0.2),
         ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-                "“  ",
-                style: GoogleFonts.spaceGrotesk(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 100,
-                  color: Colors.blue,
-
-                )
-            ),
-            SizedBox(
-              width: screenWidth(context, mulBy: 0.45),
-              child: RichText(
-                text: TextSpan(
-                  text: "Flutter combines\n",
-                  style: Theme.of(context).textTheme.bodyLarge,
-                  children: [
-                    TextSpan(
-                      text: "native performance and quality ",
-                        style: GoogleFonts.kumbhSans(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 48,
-                          color: Colors.blue,
-                        )
-                    ),
-                    TextSpan(
-                        text: "with "
-                    ),
-                    TextSpan(
-                        text: "high-velocity development ",
-                        style: GoogleFonts.kumbhSans(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 48,
-                          color: Colors.blue,
-                        )
-                    ),
-                    TextSpan(
-                        text: "and "
-                    ),
-                    TextSpan(
-                        text: "multi-platform reach",
-                        style: GoogleFonts.kumbhSans(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 48,
-                          color: Colors.blue,
-                        )
-                    ),
-                    TextSpan(
-                        text: "."
-                    ),
-                  ]
-                ),
-              ),
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Text(
-                  "  ”",
+        IntrinsicHeight(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                  "“  ",
                   style: GoogleFonts.spaceGrotesk(
                     fontWeight: FontWeight.w600,
                     fontSize: 100,
@@ -91,8 +37,67 @@ class _Slide4State extends State<Slide4> {
 
                   )
               ),
-            ),
-          ],
+              SizedBox(
+                width: screenWidth(context, mulBy: 0.45),
+                child: RichText(
+                  text: TextSpan(
+                    text: "Flutter combines\n",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                    children: [
+                      TextSpan(
+                        text: "native performance and quality ",
+                          style: GoogleFonts.kumbhSans(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 48,
+                            color: Colors.blue,
+                          )
+                      ),
+                      const TextSpan(
+                          text: "with "
+                      ),
+                      TextSpan(
+                          text: "high-velocity development ",
+                          style: GoogleFonts.kumbhSans(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 48,
+                            color: Colors.blue,
+                          )
+                      ),
+                      const TextSpan(
+                          text: "and "
+                      ),
+                      TextSpan(
+                          text: "multi-platform reach",
+                          style: GoogleFonts.kumbhSans(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 48,
+                            color: Colors.blue,
+                          )
+                      ),
+                      const TextSpan(
+                          text: "."
+                      ),
+                    ]
+                  ),
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Text(
+                    "  ”",
+                    softWrap: true,
+                    textAlign: TextAlign.start,
+
+                    style: GoogleFonts.spaceGrotesk(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 100,
+                      color: Colors.blue,
+
+                    )
+                ),
+              ),
+            ],
+          ),
         )
       ],
     );
