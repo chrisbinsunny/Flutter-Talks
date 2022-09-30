@@ -19,7 +19,7 @@ class _Slide2State extends State<Slide2> {
       children: [
         Text(
             "Flutter is Google’s UI Framework",
-            style: Theme.of(context).textTheme.headline2
+            style: Theme.of(context).textTheme.displayMedium
         ),
         SizedBox(
           height: screenHeight(context, mulBy: 0.01),
@@ -36,7 +36,7 @@ class _Slide2State extends State<Slide2> {
               width: screenWidth(context, mulBy: 0.4),
               child: Text(
                   "Helping developers craft high-quality native experiences across multiple platforms in record time.",
-                  style: Theme.of(context).textTheme.bodyText1
+                  style: Theme.of(context).textTheme.bodyMedium
               ),
             ),
             Container(
