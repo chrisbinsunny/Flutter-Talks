@@ -39,7 +39,7 @@ class _Slide1State extends State<Slide1> {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
-                height: 320,
+                height: 300,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(40),
                   boxShadow: const [
