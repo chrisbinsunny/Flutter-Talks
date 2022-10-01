@@ -51,6 +51,11 @@ class ThemeNotifier with ChangeNotifier {
         fontSize: 48,
         color: Color(0xff868686),
       ),
+        bodySmall: GoogleFonts.kumbhSans(
+          fontWeight: FontWeight.w300,
+          fontSize: 30,
+          color: const Color(0xff868686),
+        ),
       bodyMedium: GoogleFonts.roboto(
         fontWeight: FontWeight.w400,
         fontSize: 35,
