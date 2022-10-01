@@ -51,7 +51,7 @@ class ThemeNotifier with ChangeNotifier {
         fontSize: 48,
         color: Color(0xff868686),
       ),
-        bodySmall: GoogleFonts.kumbhSans(
+      bodySmall: GoogleFonts.kumbhSans(
           fontWeight: FontWeight.w300,
           fontSize: 30,
           color: const Color(0xff868686),
@@ -70,7 +70,13 @@ class ThemeNotifier with ChangeNotifier {
         fontWeight: FontWeight.normal,
         fontSize: 25,
         color: Color(0xff868686),
-      )
+      ),
+      headlineSmall: GoogleFonts.roboto(
+        fontWeight: FontWeight.normal,
+        fontSize: 33,
+        color: Color(0xff868686),
+      ),
+
     ),
     fontFamily: "SF",
     primarySwatch: Colors.deepOrange,
