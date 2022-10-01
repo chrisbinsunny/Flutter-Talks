@@ -18,7 +18,7 @@ class _Slide7State extends State<Slide7> {
   @override
   Widget build(BuildContext context) {
     return Base3(
-      head: "Flutter is Google’s UI Framework",
+      head: "High-velocity development",
       image: "assets/gif/hotR.gif",
       children: [
         Text("Sub-second reload times",
