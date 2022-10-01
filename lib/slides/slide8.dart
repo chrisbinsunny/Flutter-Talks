@@ -30,7 +30,6 @@ class _Slide8State extends State<Slide8> {
           )
         ],
       ),
-      image: "assets/gif/hotR.gif",
       children: [
         Text("Control every pixel on the screen",
             style: Theme.of(context).textTheme.headlineSmall),
