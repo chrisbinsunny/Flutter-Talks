@@ -26,30 +26,25 @@ class Base3 extends StatelessWidget {
         children: [
           SizedBox(
             width: screenWidth(context, mulBy: 0.5),
-            height: screenHeight(context),
-            child: Padding(
+            child: ListView(
               padding: EdgeInsets.symmetric(
-                horizontal: screenWidth(context, mulBy: 0.05),
-                vertical: screenHeight(context, mulBy: 0.08)
+                  horizontal: screenWidth(context, mulBy: 0.05),
+                  vertical: screenHeight(context, mulBy: 0.08)
+              ),
+              children: [
+                Text(
+                head,
+                style: Theme.of(context).textTheme.displayMedium
             ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                  head,
-                  style: Theme.of(context).textTheme.displayMedium
-              ),
-              SizedBox(
-                height: screenHeight(context, mulBy: 0.01),
-              ),
-              underline(),
-                  SizedBox(
-                    height: screenHeight(context, mulBy: 0.05),
-                  ),
-                  ...children,
-                ],
-              ),
+            SizedBox(
+              height: screenHeight(context, mulBy: 0.01),
+            ),
+            Align(alignment:Alignment.topLeft,child: underline()),
+                SizedBox(
+                  height: screenHeight(context, mulBy: 0.1),
+                ),
+                ...children
+              ],
             ),
           ),
           Expanded(
