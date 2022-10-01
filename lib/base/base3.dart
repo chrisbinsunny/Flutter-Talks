@@ -56,15 +56,8 @@ class Base3 extends StatelessWidget {
             child: Container(
               height: screenHeight(context),
               decoration: const BoxDecoration(
-                color: Colors.blue,
-                boxShadow: [
-                  BoxShadow(
-                      color: Colors.black38,
-                      blurRadius: 10,
-                      spreadRadius: 5,
-                      offset: Offset(0, 3)
-                  )
-                ],
+                color: Color(0xff074177),
+
               ),
               clipBehavior: Clip.antiAlias,
               child: Image.asset(
