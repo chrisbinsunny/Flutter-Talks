@@ -19,7 +19,7 @@ class _Slide4State extends State<Slide4> {
   @override
   Widget build(BuildContext context) {
     return Base2(
-      head: "All time challenges of mobile development",
+      head: "Flutter offers the best of both worlds",
       children: [
         SizedBox(
           height: screenHeight(context, mulBy: 0.2),
