@@ -6,10 +6,11 @@ import '../widgets.dart';
 
 
 class Base3 extends StatelessWidget {
-  const Base3({Key? key, required this.children, required this.head, required this.image}) : super(key: key);
+  const Base3({Key? key, required this.children, required this.head, this.image, this.child}) : super(key: key);
 
   final List<Widget> children;
-  final String head, image;
+  final String? head, image;
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class Base3 extends StatelessWidget {
               ),
               children: [
                 Text(
-                head,
+                head!,
                 style: Theme.of(context).textTheme.displayMedium
             ),
             SizedBox(
@@ -55,8 +56,8 @@ class Base3 extends StatelessWidget {
 
               ),
               clipBehavior: Clip.antiAlias,
-              child: Image.asset(
-                image,
+              child: child??Image.asset(
+                image!,
               ),
             ),
           ),
