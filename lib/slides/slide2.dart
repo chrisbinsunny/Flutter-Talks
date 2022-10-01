@@ -46,7 +46,7 @@ class _Slide2State extends State<Slide2> {
               ),
               clipBehavior: Clip.antiAlias,
               child: Image.asset(
-                "assets/ui1.gif",
+                "assets/gif/ui1.gif",
               ),
             ),
           ],
