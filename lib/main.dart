@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_talks/slideSelector.dart';
+import 'package:flutter_talks/slides/graphicHorsepower.dart';
 import 'package:flutter_talks/slides/slide1.dart';
 import 'package:flutter_talks/slides/slide10.dart';
 import 'package:flutter_talks/slides/slide2.dart';
@@ -23,11 +24,15 @@ void main() async {
 
   runApp(ChangeNotifierProvider<ThemeNotifier>(
       create: (_) => ThemeNotifier(ThemeNotifier.darkTheme),
-      child: const MyApp()));
+      child: MultiProvider(providers: [
+        ChangeNotifierProvider<Slide>(
+          create: (context) => Slide(),
+        ),
+      ],child: MyApp())));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  MyApp({super.key});
 
   static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   static FirebaseAnalyticsObserver observer =
@@ -42,6 +47,7 @@ class MyApp extends StatelessWidget {
       navigatorObservers: <NavigatorObserver>[observer],
       theme: themeNotifier.getTheme(),
       routes: {
+        '/': (context) => const Slide1(),
         '/slide1': (context) => const Slide1(),
         '/slide2': (context) => const Slide2(),
         '/slide3': (context) => const Slide3(),
@@ -52,8 +58,10 @@ class MyApp extends StatelessWidget {
         '/slide8': (context) => const Slide8(),
         '/slide9': (context) => const Slide9(),
         '/slide10': (context) => const Slide10(),
+        '/slide11': (context) => const GraphicHorsePower(),
       },
-      home: const SlideSelector(),
+      initialRoute: "/slide11",
+      //home: const SlideSelector(),
     );
   }
 }
