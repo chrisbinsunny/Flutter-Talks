@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_talks/slides/slide1.dart';
+import 'package:flutter_talks/slides/slide2.dart';
+import 'package:flutter_talks/slides/slide3.dart';
+import 'package:flutter_talks/slides/slide4.dart';
+import 'package:flutter_talks/slides/slide6.dart';
 import 'package:flutter_talks/theme.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
@@ -32,7 +36,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       navigatorObservers: <NavigatorObserver>[observer],
       theme: themeNotifier.getTheme(),
-      home: const Slide1(),
+      home: const Slide6(),
     );
   }
 }
