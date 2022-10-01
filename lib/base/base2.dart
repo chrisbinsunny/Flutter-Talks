@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_talks/sizes.dart';
+import 'package:flutter_talks/slideSelector.dart';
 
 import '../widgets.dart';
 
@@ -13,40 +14,42 @@ class Base2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButton: FloatingActionButton.large(
-        onPressed: (){},
-        child: const FlutterLogo(
-          size: 50,
+    return SlideSelector(
+      child: Scaffold(
+        floatingActionButton: FloatingActionButton.large(
+          onPressed: (){},
+          child: const FlutterLogo(
+            size: 50,
+          ),
         ),
-      ),
 
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: screenWidth(context, mulBy: 0.05),
-            vertical: screenHeight(context, mulBy: 0.08)
-        ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-              head,
-              style: Theme.of(context).textTheme.displayMedium
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: screenWidth(context, mulBy: 0.05),
+              vertical: screenHeight(context, mulBy: 0.08)
           ),
-          SizedBox(
-            height: screenHeight(context, mulBy: 0.01),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                head,
+                style: Theme.of(context).textTheme.displayMedium
+            ),
+            SizedBox(
+              height: screenHeight(context, mulBy: 0.01),
+            ),
+            underline(),
+                SizedBox(
+                  height: screenHeight(context, mulBy: 0.05),
+                ),
+                ...children,
+              ],
+            ),
           ),
-          underline(),
-              SizedBox(
-                height: screenHeight(context, mulBy: 0.05),
-              ),
-              ...children,
-            ],
-          ),
-        ),
-      )
+        )
+      ),
     );
   }
 }
