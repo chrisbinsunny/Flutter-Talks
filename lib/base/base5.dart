@@ -9,7 +9,7 @@ import 'package:flutter_talks/slideSelector.dart';
 class Base5 extends StatelessWidget {
   const Base5({Key? key,  required this.children, required this.head}) : super(key: key);
 
-  final List<Widget> children;
+  final List<String> children;
   final String head;
   @override
   Widget build(BuildContext context) {
@@ -34,12 +34,23 @@ class Base5 extends StatelessWidget {
               ),
             ),
           ),
-        body: ListView(
-          padding: EdgeInsets.symmetric(
-              horizontal: screenWidth(context, mulBy: 0.05),
-              vertical: screenHeight(context, mulBy: 0.08)
+        body: ListView.separated(
+          padding: EdgeInsets.only(
+              right: screenWidth(context, mulBy: 0.05),
+              left:  screenWidth(context, mulBy: 0.05),
+              top: screenHeight(context, mulBy: 0.18),
+            bottom: screenHeight(context, mulBy: 0.08)
           ),
-          children: children,
+          itemBuilder: (context, index){
+            return Text("✔️   ${children[index]}",
+                style: Theme.of(context).textTheme.bodyMedium);
+          },
+          separatorBuilder: (context, index){
+            return SizedBox(
+              height: screenHeight(context, mulBy: 0.035),
+            );
+          },
+          itemCount: children.length,
         ),
       ),
     );
