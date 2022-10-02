@@ -53,7 +53,7 @@ class Slide extends ChangeNotifier {
     if (slideNo == 4) {
       slideNo++;
     }
-    if (slideNo != 12) {
+    if (slideNo != 15) {
       slideNo++;
     }
     notifyListeners();
