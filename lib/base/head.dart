@@ -20,11 +20,10 @@ class Heading extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
-
             children: [
               Expanded(
                 child: FlutterLogo(
-                  size: screenHeight(context, mulBy: 0.6),
+                  size: screenHeight(context, mulBy: 0.5),
                 ),
               ),
               Expanded(
@@ -32,7 +31,7 @@ class Heading extends StatelessWidget {
                     heading,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontSize: 40
+                      fontSize: 60
                     ),
                   )
 
