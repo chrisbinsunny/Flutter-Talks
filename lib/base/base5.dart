@@ -24,23 +24,23 @@ class Base5 extends StatelessWidget {
           ),
         ),
           appBar: AppBar(
+            toolbarHeight: screenHeight(context, mulBy: 0.1),
+            leading: SizedBox(),
             title: Text(
-              head
+              head,
+              style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                color: Colors.white,
+                fontSize: 48
+              ),
             ),
           ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(
+        body: ListView(
+          padding: EdgeInsets.symmetric(
               horizontal: screenWidth(context, mulBy: 0.05),
               vertical: screenHeight(context, mulBy: 0.08)
           ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: children,
-            ),
-          ),
-        )
+          children: children,
+        ),
       ),
     );
   }
