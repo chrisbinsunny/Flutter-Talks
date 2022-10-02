@@ -34,17 +34,17 @@ class ThemeNotifier with ChangeNotifier {
         displayLarge: GoogleFonts.kumbhSans(
           fontWeight: FontWeight.w500,
           fontSize: 130,
-          color: Colors.blueAccent,
+          color: const Color(0xff0f51b0),
         ),
         displayMedium: GoogleFonts.kumbhSans(
           fontWeight: FontWeight.w400,
           fontSize: 45,
-          color: Colors.blueAccent,
+          color: const Color(0xff0f51b0),
         ),
       displaySmall: GoogleFonts.kumbhSans(
         fontWeight: FontWeight.w300,
         fontSize: 35,
-        color: Colors.blueAccent,
+        color: const Color(0xff0f51b0),
       ),
       bodyLarge: GoogleFonts.kumbhSans(
         fontWeight: FontWeight.w400,
@@ -71,12 +71,16 @@ class ThemeNotifier with ChangeNotifier {
         fontSize: 25,
         color: Color(0xff868686),
       ),
+      headlineLarge: GoogleFonts.kumbhSans(
+        fontWeight: FontWeight.bold,
+        fontSize: 35,
+        color: Colors.blue,
+      ),
       headlineSmall: GoogleFonts.roboto(
         fontWeight: FontWeight.normal,
-        fontSize: 33,
+        fontSize: 30,
         color: Color(0xff868686),
       ),
-
     ),
     fontFamily: "SF",
     primarySwatch: Colors.deepOrange,
