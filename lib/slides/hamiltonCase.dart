@@ -43,7 +43,7 @@ class _HamiltonCaseState extends State<HamiltonCase> {
                 children: [
                   RichText(
                     text: TextSpan(
-                        text: "Hamilton launched as a ",
+                        text: "\"Hamilton launched as a ",
                         style: Theme.of(context).textTheme.bodyLarge,
                         children: [
                           TextSpan(
@@ -64,7 +64,7 @@ class _HamiltonCaseState extends State<HamiltonCase> {
                               )
                           ),
                           const TextSpan(
-                              text: "."
+                              text: ".\""
                           ),
                         ]
                     ),
