@@ -6,6 +6,6 @@ class StlessVsStful extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Heading(heading: "\"Stateless Widget\nvs\nStateful Widget\"");
+    return const HeadingBase(heading: "\"Stateless Widget\nvs\nStateful Widget\"");
   }
 }
