@@ -14,7 +14,7 @@ import 'package:flutter_talks/slides/slide6.dart';
 import 'package:flutter_talks/slides/slide7.dart';
 import 'package:flutter_talks/slides/slide8.dart';
 import 'package:flutter_talks/slides/slide9.dart';
-import 'package:flutter_talks/slides/stlessVsStful.dart';
+import 'package:flutter_talks/slides/stlessVsStfulHead.dart';
 import 'package:flutter_talks/slides/useFlutter.dart';
 import 'package:flutter_talks/theme.dart';
 import 'package:provider/provider.dart';
