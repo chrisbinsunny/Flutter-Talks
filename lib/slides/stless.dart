@@ -19,32 +19,33 @@ class _StatelessState extends State<Stateless> {
   @override
   Widget build(BuildContext context) {
     return Base5(
-      head: "Built by Google\nUsed by Google, developers and companies around the world",
+      head: "Stateless Widget",
       children: [
         SizedBox(
           height: screenHeight(context, mulBy: 0.1),
         ),
-        Center(
-          child: Container(
-            width: screenWidth(context, mulBy: 0.4),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(40),
-              boxShadow: const [
-                BoxShadow(
-                    color: Colors.black38,
-                    blurRadius: 10,
-                    spreadRadius: 5,
-                    offset: Offset(0, 3)
-                )
-              ],
-            ),
-            clipBehavior: Clip.antiAlias,
-            child: Image.asset(
-              "assets/images/companies.png",
-              fit: BoxFit.fill,
-            ),
-          ),
+        Text("✔️   Dumb Widget",
+            style: Theme.of(context).textTheme.bodyMedium),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
         ),
+        Text("✔️   It doesn’t know anything",
+            style: Theme.of(context).textTheme.bodyMedium),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("✔️   Gets rendered only once or",
+            style: Theme.of(context).textTheme.bodyMedium),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("✔️   When the parent widget changes the configuration",
+            style: Theme.of(context).textTheme.bodyMedium),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("✔️   Useful for code reusing",
+            style: Theme.of(context).textTheme.bodyMedium),
       ],
     );
   }
