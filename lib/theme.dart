@@ -33,7 +33,7 @@ class ThemeNotifier with ChangeNotifier {
     textTheme: TextTheme(
         displayLarge: GoogleFonts.kumbhSans(
           fontWeight: FontWeight.w500,
-          fontSize: 140,
+          fontSize: 130,
           color: Colors.blueAccent,
         ),
         displayMedium: GoogleFonts.kumbhSans(
