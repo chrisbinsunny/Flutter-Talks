@@ -6,6 +6,7 @@ import 'package:flutter_talks/slides/ecosystem.dart';
 import 'package:flutter_talks/slides/graphicHorsepower.dart';
 import 'package:flutter_talks/slides/hamiltonCase.dart';
 import 'package:flutter_talks/slides/hotReloadHead.dart';
+import 'package:flutter_talks/slides/ques.dart';
 import 'package:flutter_talks/slides/slide1.dart';
 import 'package:flutter_talks/slides/slide10.dart';
 import 'package:flutter_talks/slides/slide2.dart';
@@ -15,9 +16,11 @@ import 'package:flutter_talks/slides/slide6.dart';
 import 'package:flutter_talks/slides/slide7.dart';
 import 'package:flutter_talks/slides/slide8.dart';
 import 'package:flutter_talks/slides/slide9.dart';
+import 'package:flutter_talks/slides/stful.dart';
 import 'package:flutter_talks/slides/stless.dart';
 import 'package:flutter_talks/slides/stlessVsStfulHead.dart';
 import 'package:flutter_talks/slides/useFlutter.dart';
+import 'package:flutter_talks/slides/widgetsEverywhere.dart';
 import 'package:flutter_talks/theme.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
@@ -71,8 +74,11 @@ class MyApp extends StatelessWidget {
         '/slide15': (context) => const StlessVsStful(),
         '/slide16': (context) => const HotReloadHead(),
         '/slide17': (context) => const Stateless(),
+        '/slide18': (context) => const Stateful(),
+        '/slide19': (context) => const Ques(),
+        '/slide20': (context) => const WidgetImage(),
       },
-      initialRoute: "/slide17",
+      initialRoute: "/slide19",
       //home: const SlideSelector(),
     );
   }

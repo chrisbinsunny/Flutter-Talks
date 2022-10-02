@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_talks/sizes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ThemeNotifier with ChangeNotifier {
@@ -83,7 +84,7 @@ class ThemeNotifier with ChangeNotifier {
       ),
     ),
     fontFamily: "SF",
-    primarySwatch: Colors.deepOrange,
+    primarySwatch: Colors.blue,
     scaffoldBackgroundColor: const Color(0xff242127),
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: Color(0xff242127),
@@ -94,7 +95,9 @@ class ThemeNotifier with ChangeNotifier {
         extendedPadding: EdgeInsets.zero,
 
       ),
-
+    appBarTheme: AppBarTheme(
+      color: Color(0xff074177),
+    )
   );
 
   ThemeData _themeData;

@@ -27,7 +27,6 @@ class SlideSelector extends StatelessWidget {
                 .pushReplacementNamed("/slide${slide.getSlideNo}");
           }
           if (event.isKeyPressed(LogicalKeyboardKey.arrowRight)) {
-            print(ModalRoute.of(context)?.settings.name);
             Provider.of<Slide>(context, listen: false).incSlideNo();
             Navigator.of(context)
                 .pushReplacementNamed("/slide${slide.getSlideNo}");
@@ -53,7 +52,7 @@ class Slide extends ChangeNotifier {
     if (slideNo == 4) {
       slideNo++;
     }
-    if (slideNo != 15) {
+    if (slideNo != 20) {
       slideNo++;
     }
     notifyListeners();
