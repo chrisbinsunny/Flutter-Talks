@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_talks/slideSelector.dart';
+import 'package:flutter_talks/slides/ecosystem.dart';
 import 'package:flutter_talks/slides/graphicHorsepower.dart';
 import 'package:flutter_talks/slides/hamiltonCase.dart';
 import 'package:flutter_talks/slides/slide1.dart';
@@ -13,6 +14,8 @@ import 'package:flutter_talks/slides/slide6.dart';
 import 'package:flutter_talks/slides/slide7.dart';
 import 'package:flutter_talks/slides/slide8.dart';
 import 'package:flutter_talks/slides/slide9.dart';
+import 'package:flutter_talks/slides/stlessVsStful.dart';
+import 'package:flutter_talks/slides/useFlutter.dart';
 import 'package:flutter_talks/theme.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
@@ -61,9 +64,11 @@ class MyApp extends StatelessWidget {
         '/slide10': (context) => const Slide10(),
         '/slide11': (context) => const GraphicHorsePower(),
         '/slide12': (context) => const HamiltonCase(),
-
+        '/slide13': (context) => const Ecosystem(),
+        '/slide14': (context) => const UseFlutter(),
+        '/slide15': (context) => const StlessVsStful(),
       },
-      initialRoute: "/slide12",
+      initialRoute: "/slide15",
       //home: const SlideSelector(),
     );
   }
