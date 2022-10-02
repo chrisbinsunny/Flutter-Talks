@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_talks/sizes.dart';
 import 'package:flutter_talks/slideSelector.dart';
@@ -14,7 +16,9 @@ class Base4 extends StatelessWidget {
     return SlideSelector(
       child: Scaffold(
         floatingActionButton: FloatingActionButton.large(
-          onPressed: (){},
+          onPressed: (){
+            window.open('https://flutter.dev', 'new tab');
+          },
           child: const FlutterLogo(
             size: 50,
           ),
