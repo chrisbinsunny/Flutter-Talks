@@ -39,7 +39,7 @@ class _Slide10State extends State<Slide10> {
             ),
             clipBehavior: Clip.antiAlias,
             child: Image.asset(
-              "assets/images/componies.png",
+              "assets/images/companies.png",
               fit: BoxFit.fill,
             ),
           ),
