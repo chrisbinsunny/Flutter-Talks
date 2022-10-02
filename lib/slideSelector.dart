@@ -3,57 +3,67 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 class SlideSelector extends StatelessWidget {
-  const SlideSelector({Key? key}) : super(key: key);
+  const SlideSelector({Key? key, required this.child}) : super(key: key);
+
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
+    final slide = Provider.of<Slide>(context);
+
     return RawKeyboardListener(
-      autofocus: true,
+        autofocus: true,
         focusNode: FocusNode(),
-        onKey: (event){
-        if(event.isKeyPressed(LogicalKeyboardKey.arrowLeft)){
-          Provider.of<Slide>(context,
-              listen: false)
-              .decSlideNo();
-        }
-        if(event.isKeyPressed(LogicalKeyboardKey.arrowRight)){
-          Provider.of<Slide>(context,
-              listen: false)
-              .incSlideNo();
-        }
+        onKey: (event) {
+          Provider.of<Slide>(context, listen: false).setSlideNo(
+            int.parse(
+              ModalRoute.of(context)?.settings.name?.replaceAll("/slide", "")??"1",
+            ),
+          );
+
+          if (event.isKeyPressed(LogicalKeyboardKey.arrowLeft)) {
+            Provider.of<Slide>(context, listen: false).decSlideNo();
+            Navigator.of(context)
+                .pushReplacementNamed("/slide${slide.getSlideNo}");
+          }
+          if (event.isKeyPressed(LogicalKeyboardKey.arrowRight)) {
+            print(ModalRoute.of(context)?.settings.name);
+            Provider.of<Slide>(context, listen: false).incSlideNo();
+            Navigator.of(context)
+                .pushReplacementNamed("/slide${slide.getSlideNo}");
+          }
         },
-        child: Container());
+        child: child);
   }
 }
 
-
-class Slide extends ChangeNotifier{
-
-  int slideNo=0;
+class Slide extends ChangeNotifier {
+  int slideNo = 1;
 
   int get getSlideNo {
     return slideNo;
   }
 
-
   void setSlideNo(int val) {
-    slideNo= val;
+    slideNo = val;
     notifyListeners();
   }
 
   void incSlideNo() {
-    if(slideNo==4){
+    if (slideNo == 4) {
       slideNo++;
     }
-    slideNo++;
+    if (slideNo != 12) {
+      slideNo++;
+    }
     notifyListeners();
   }
 
   void decSlideNo() {
-    if(slideNo==6){
+    if (slideNo == 6) {
       slideNo--;
     }
-    if(slideNo!=0){
+    if (slideNo != 1) {
       slideNo--;
     }
     notifyListeners();
