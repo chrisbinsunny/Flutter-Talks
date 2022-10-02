@@ -3,6 +3,7 @@ import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_talks/slideSelector.dart';
 import 'package:flutter_talks/slides/graphicHorsepower.dart';
+import 'package:flutter_talks/slides/hamiltonCase.dart';
 import 'package:flutter_talks/slides/slide1.dart';
 import 'package:flutter_talks/slides/slide10.dart';
 import 'package:flutter_talks/slides/slide2.dart';
@@ -59,8 +60,10 @@ class MyApp extends StatelessWidget {
         '/slide9': (context) => const Slide9(),
         '/slide10': (context) => const Slide10(),
         '/slide11': (context) => const GraphicHorsePower(),
+        '/slide12': (context) => const HamiltonCase(),
+
       },
-      initialRoute: "/slide11",
+      initialRoute: "/slide12",
       //home: const SlideSelector(),
     );
   }
