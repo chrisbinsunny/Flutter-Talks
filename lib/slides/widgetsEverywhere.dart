@@ -24,7 +24,7 @@ class WidgetImage extends StatelessWidget {
         ),
         body: Center(
           child: Image.asset(
-            "assets/images/widgets.png",
+            "assets/images/widgets.jpg",
             fit: BoxFit.fitHeight,
             height: screenHeight(context),
           ),
