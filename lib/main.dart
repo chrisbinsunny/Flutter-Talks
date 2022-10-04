@@ -79,8 +79,9 @@ class MyApp extends StatelessWidget {
         '/slide19': (context) => const Ques(),
         '/slide20': (context) => const WidgetImage(),
         '/slide21': (context) => const AppCases(),
+        '/slide22': (context) => const GpayCase(),
       },
-      initialRoute: "/slide21",
+      initialRoute: "/slide22",
       //home: const SlideSelector(),
     );
   }
