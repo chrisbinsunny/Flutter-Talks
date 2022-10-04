@@ -24,11 +24,87 @@ class AppCases extends StatelessWidget {
         ),
         body: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Image.asset(
-                "assets/images/widgets.png",
-                fit: BoxFit.fitHeight,
-                height: screenHeight(context),
+              Container(
+                height: screenHeight(context, mulBy: 0.8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: const [
+                    BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 10,
+                        spreadRadius: 5,
+                        offset: Offset(0, 3)
+                    )
+                  ],
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(
+                  "assets/images/adwordsCase.png",
+                  fit: BoxFit.fitHeight,
+                  height: screenHeight(context),
+                ),
+              ),
+              Container(
+                height: screenHeight(context, mulBy: 0.8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: const [
+                    BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 10,
+                        spreadRadius: 5,
+                        offset: Offset(0, 3)
+                    )
+                  ],
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(
+                  "assets/images/alibabaCase.png",
+                  fit: BoxFit.fitHeight,
+                  height: screenHeight(context),
+                ),
+              ),
+              Container(
+                height: screenHeight(context, mulBy: 0.8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: const [
+                    BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 10,
+                        spreadRadius: 5,
+                        offset: Offset(0, 3)
+                    )
+                  ],
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(
+                  "assets/images/birchCase.png",
+                  fit: BoxFit.fitHeight,
+                  height: screenHeight(context),
+                ),
+              ),
+              Container(
+                height: screenHeight(context, mulBy: 0.8),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: const [
+                    BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 10,
+                        spreadRadius: 5,
+                        offset: Offset(0, 3)
+                    )
+                  ],
+                ),
+                clipBehavior: Clip.antiAlias,
+                child: Image.asset(
+                  "assets/images/hamiltonCase.png",
+                  fit: BoxFit.fitHeight,
+                  height: screenHeight(context),
+                ),
               ),
             ],
           ),
