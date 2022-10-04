@@ -97,7 +97,8 @@ class ThemeNotifier with ChangeNotifier {
       ),
     appBarTheme: AppBarTheme(
       color: Color(0xff074177),
-    )
+    ),
+    cardColor:  Color(0xff074177),
   );
 
   ThemeData _themeData;
