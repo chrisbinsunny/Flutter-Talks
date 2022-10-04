@@ -7,6 +7,7 @@ import 'package:flutter_talks/slides/ecosystem.dart';
 import 'package:flutter_talks/slides/graphicHorsepower.dart';
 import 'package:flutter_talks/slides/hamiltonCase.dart';
 import 'package:flutter_talks/slides/hotReloadHead.dart';
+import 'package:flutter_talks/slides/keyComponent.dart';
 import 'package:flutter_talks/slides/ques.dart';
 import 'package:flutter_talks/slides/slide1.dart';
 import 'package:flutter_talks/slides/slide10.dart';
@@ -80,8 +81,9 @@ class MyApp extends StatelessWidget {
         '/slide20': (context) => const WidgetImage(),
         '/slide21': (context) => const AppCases(),
         '/slide22': (context) => const GpayCase(),
+        '/slide23': (context) => const KeyComponent(),
       },
-      initialRoute: "/slide22",
+      initialRoute: "/slide23",
       //home: const SlideSelector(),
     );
   }
