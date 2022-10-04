@@ -9,9 +9,9 @@ import '../widgets.dart';
 
 
 class Base6 extends StatelessWidget {
-  const Base6({Key? key, required this.children, required this.head, this.image, this.child}) : super(key: key);
+  const Base6({Key? key, this.children, required this.head, this.image, this.child}) : super(key: key);
 
-  final List<Widget> children;
+  final List<Widget>? children;
   final String? head, image;
   final Widget? child;
 
@@ -31,41 +31,39 @@ class Base6 extends StatelessWidget {
         body: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(
-              width: screenWidth(context, mulBy: 0.5),
-              child: ListView(
+            Expanded(
+              child: Container(
+                color: Theme.of(context).appBarTheme.backgroundColor,
+                height: screenHeight(context),
+                alignment: Alignment.center,
                 padding: EdgeInsets.symmetric(
                     horizontal: screenWidth(context, mulBy: 0.05),
                     vertical: screenHeight(context, mulBy: 0.08)
                 ),
-                children: [
-                  Text(
-                  head!,
-                  style: Theme.of(context).textTheme.displayMedium
-              ),
-              SizedBox(
-                height: screenHeight(context, mulBy: 0.01),
-              ),
-              Align(alignment:Alignment.topLeft,child: underline()),
-                  SizedBox(
-                    height: screenHeight(context, mulBy: 0.1),
-                  ),
-                  ...children
-                ],
+                child: child??ListView(
+                  children: [
+                    Text(
+                    head!,
+                    style: Theme.of(context).textTheme.displayMedium
+                ),
+                SizedBox(
+                  height: screenHeight(context, mulBy: 0.01),
+                ),
+                Align(
+                    alignment:Alignment.topLeft,
+                    child: underline()),
+                    SizedBox(
+                      height: screenHeight(context, mulBy: 0.1),
+                    ),
+                    ...children!
+                  ],
+                ),
               ),
             ),
-            Expanded(
-              child: Container(
-                height: screenHeight(context),
-                decoration: const BoxDecoration(
-                  color: Color(0xff074177),
-
-                ),
-                clipBehavior: Clip.antiAlias,
-                child: child??Image.asset(
-                  image!,
-                ),
-              ),
+            Image.asset(
+              image!,
+              fit: BoxFit.fitHeight,
+              height: screenHeight(context),
             ),
 
           ],
