@@ -19,7 +19,6 @@ class _AppDetailed1State extends State<AppDetailed1> {
   @override
   Widget build(BuildContext context) {
     return Base6(
-      head: "High-velocity development",
       image: "assets/images/screen1.png",
       child: Text(
           "What do you see here?",
@@ -43,15 +42,46 @@ class _AppDetailed2State extends State<AppDetailed2> {
   @override
   Widget build(BuildContext context) {
     return Base6(
-      head: "High-velocity development",
-      image: "assets/images/screen1.png",
-      child: Text(
-        "What do you see here?",
-        style: Theme.of(context).textTheme.displayMedium?.copyWith(
-            color: Colors.white,
-            fontSize: 55
+      head: "Let’s Diagram the Layout",
+      image: "assets/images/screen2.png",
+      children: [
+        Text("➡️Sub-second reload times",
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+              color: Colors.white
+            )),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
         ),
-      ),
+        Text("Paint your app to life",
+            style: Theme.of(context).textTheme.headlineSmall),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("Iterate rapidly on features",
+            style: Theme.of(context).textTheme.headlineSmall),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("Test hypotheses quicker than ever",
+            style: Theme.of(context).textTheme.headlineSmall),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("More time to experiment & test features",
+            style: Theme.of(context).textTheme.headlineSmall),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("Single-codebase for faster collab",
+            style: Theme.of(context).textTheme.headlineSmall),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("3X Productivity Gains",
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                fontWeight: FontWeight.w900
+            )),
+      ],
     );
   }
 }
