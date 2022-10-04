@@ -28,9 +28,8 @@ class Base5 extends StatelessWidget {
             leading: SizedBox(),
             title: Text(
               head,
-              style: Theme.of(context).textTheme.displaySmall?.copyWith(
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 color: Colors.white,
-                fontSize: 48
               ),
             ),
           ),
