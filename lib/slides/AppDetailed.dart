@@ -45,41 +45,42 @@ class _AppDetailed2State extends State<AppDetailed2> {
       head: "Let’s Diagram the Layout",
       image: "assets/images/screen2.png",
       children: [
-        Text("➡️Sub-second reload times",
+        Text("➡️  Look for rows and columns",
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-              color: Colors.white
+              color: Colors.white,
+              fontSize: 26
             )),
         SizedBox(
           height: screenHeight(context, mulBy: 0.035),
         ),
-        Text("Paint your app to life",
-            style: Theme.of(context).textTheme.headlineSmall),
-        SizedBox(
-          height: screenHeight(context, mulBy: 0.035),
-        ),
-        Text("Iterate rapidly on features",
-            style: Theme.of(context).textTheme.headlineSmall),
-        SizedBox(
-          height: screenHeight(context, mulBy: 0.035),
-        ),
-        Text("Test hypotheses quicker than ever",
-            style: Theme.of(context).textTheme.headlineSmall),
-        SizedBox(
-          height: screenHeight(context, mulBy: 0.035),
-        ),
-        Text("More time to experiment & test features",
-            style: Theme.of(context).textTheme.headlineSmall),
-        SizedBox(
-          height: screenHeight(context, mulBy: 0.035),
-        ),
-        Text("Single-codebase for faster collab",
-            style: Theme.of(context).textTheme.headlineSmall),
-        SizedBox(
-          height: screenHeight(context, mulBy: 0.035),
-        ),
-        Text("3X Productivity Gains",
+        Text("➡️  Is there a grid?",
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                fontWeight: FontWeight.w900
+                color: Colors.white,
+                fontSize: 26
+            )),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("➡️  Any overlapping elements?",
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                color: Colors.white,
+                fontSize: 26
+            )),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("➡️  Do we need tabs?",
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                color: Colors.white,
+                fontSize: 26
+            )),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.035),
+        ),
+        Text("➡️  Padding, alignment or borders needed?",
+            style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                color: Colors.white,
+                fontSize: 26
             )),
       ],
     );
