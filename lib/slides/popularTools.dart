@@ -18,7 +18,8 @@ class PopularTools extends StatefulWidget {
 class _PopularToolsState extends State<PopularTools> {
   @override
   Widget build(BuildContext context) {
-    return Base1(
+    return Base2(
+      head: "Works with popular tools and platforms",
       children: [
         SizedBox(
           height: screenHeight(context, mulBy: 0.1),
