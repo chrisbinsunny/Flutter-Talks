@@ -121,15 +121,11 @@ class _AppDetailed3State extends State<AppDetailed3> {
                 Expanded(
                   child: Image.asset(
                     "assets/images/screen3.png",
-                    //fit: BoxFit.fitHeight,
-                    //height: screenHeight(context),
                   ),
                 ),
                 Expanded(
                   child: Image.asset(
                     "assets/images/screen4.png",
-                    //fit: BoxFit.fitHeight,
-                    //height: screenHeight(context),
                   ),
                 ),
 
