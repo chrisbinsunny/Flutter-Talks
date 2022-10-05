@@ -9,6 +9,7 @@ import 'package:flutter_talks/slides/graphicHorsepower.dart';
 import 'package:flutter_talks/slides/hamiltonCase.dart';
 import 'package:flutter_talks/slides/hotReloadHead.dart';
 import 'package:flutter_talks/slides/keyComponent.dart';
+import 'package:flutter_talks/slides/popularTools.dart';
 import 'package:flutter_talks/slides/ques.dart';
 import 'package:flutter_talks/slides/slide1.dart';
 import 'package:flutter_talks/slides/slide10.dart';
@@ -64,7 +65,7 @@ class MyApp extends StatelessWidget {
         '/slide2': (context) => const Slide2(),
         '/slide3': (context) => const Slide3(),
         '/slide4': (context) => const Slide4(),
-        //'/slide5': (context) => const Slide5(),
+        '/slide5': (context) => const FlutterOrganisation(),
         '/slide6': (context) => const Slide6(),
         '/slide7': (context) => const Slide7(),
         '/slide8': (context) => const Slide8(),
@@ -74,7 +75,7 @@ class MyApp extends StatelessWidget {
         '/slide12': (context) => const GpayCase(),
         '/slide13': (context) => const GraphicHorsePower(),
         '/slide14': (context) => const HamiltonCase(),
-        '/slide15': (context) => const StlessVsStful(),
+        '/slide15': (context) => const PopularTools(),
         '/slide16': (context) => const Ecosystem(),
         '/slide17': (context) => const UseFlutter(),
         '/slide18': (context) => const KeyComponent(),
@@ -86,8 +87,8 @@ class MyApp extends StatelessWidget {
         '/slide24': (context) => const Stateless(),
         '/slide25': (context) => const Stateful(),   
         '/slide26': (context) => const HotReloadHead(),
-        '/slide27': (context) => const   Ques(),
-            '/slide28': (context) => const HotReloadHead(),
+        '/slide27': (context) => const HotReload(),
+        '/slide28': (context) => const Ques(),
       },
       initialRoute: "/slide25",
       //home: const SlideSelector(),
