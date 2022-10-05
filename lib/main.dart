@@ -87,11 +87,11 @@ class MyApp extends StatelessWidget {
         '/slide24': (context) => const Stateless(),
         '/slide25': (context) => const Stateful(),   
         '/slide26': (context) => const HotReloadHead(),
-        '/slide27': (context) => const HotReload(),
-        '/slide28': (context) => const HotReloadExplained(),
+        '/slide28': (context) => const HotReload(),
+        '/slide27': (context) => const HotReloadExplained(),
         '/slide29': (context) => const Ques(),
       },
-      initialRoute: "/slide25",
+      initialRoute: "/slide1",
       //home: const SlideSelector(),
     );
   }
