@@ -107,7 +107,7 @@ class _AppDetailed3State extends State<AppDetailed3> {
               size: 50,
             ),
           ),
-
+          backgroundColor: Theme.of(context).appBarTheme.backgroundColor,
           body: SizedBox(
             height: screenHeight(context),
             width: screenWidth(context),
