@@ -49,9 +49,6 @@ class Slide extends ChangeNotifier {
   }
 
   void incSlideNo() {
-    if (slideNo == 4) {
-      slideNo++;
-    }
     if (slideNo != 30) {
       slideNo++;
     }
@@ -59,9 +56,6 @@ class Slide extends ChangeNotifier {
   }
 
   void decSlideNo() {
-    if (slideNo == 6) {
-      slideNo--;
-    }
     if (slideNo != 1) {
       slideNo--;
     }
