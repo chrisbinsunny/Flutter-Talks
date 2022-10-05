@@ -1,6 +1,9 @@
-# flutter_talks
+# Flutter Talks
 
-Building beautiful native apps in record time
+A website for the "Flutter Talks".
+
+Made using Flutter with 💙
+
 
 ## Getting Started
 
