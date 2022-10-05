@@ -1,8 +1,54 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_talks/base/base1.dart';
 import 'package:flutter_talks/sizes.dart';
-import 'package:flutter_talks/widgets.dart';
-import 'dart:html' as html;
+
+import '../base/base2.dart';
+
+
+class FlutterOrganisation extends StatefulWidget {
+  const FlutterOrganisation({Key? key}) : super(key: key);
+
+  @override
+  State<FlutterOrganisation> createState() => _FlutterOrganisationState();
+}
+
+class _FlutterOrganisationState extends State<FlutterOrganisation> {
+  @override
+  Widget build(BuildContext context) {
+    return Base2(
+      head: "Flutter is a modern UI toolkit for native apps",
+      children: [
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.1),
+        ),
+        Center(
+          child: Container(
+            width: screenWidth(context, mulBy: 0.65),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(40),
+              boxShadow: const [
+                BoxShadow(
+                    color: Colors.black38,
+                    blurRadius: 10,
+                    spreadRadius: 5,
+                    offset: Offset(0, 3)
+                )
+              ],
+            ),
+            clipBehavior: Clip.antiAlias,
+            child: Image.asset(
+              "assets/images/organisation.png",
+              fit: BoxFit.fill,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 
 
 class Slide6 extends StatefulWidget {
