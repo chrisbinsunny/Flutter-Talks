@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_talks/base/head.dart';
 
+import '../base/base5.dart';
 import '../sizes.dart';
 import '../slideSelector.dart';
 
@@ -40,6 +41,27 @@ class HotReload extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class HotReloadExplained extends StatefulWidget {
+  const HotReloadExplained({Key? key}) : super(key: key);
+
+  @override
+  State<HotReloadExplained> createState() => _HotReloadExplainedState();
+}
+
+class _HotReloadExplainedState extends State<HotReloadExplained> {
+  @override
+  Widget build(BuildContext context) {
+    return const Base5(
+      head: "Hot Reload",
+      children: [
+        "Injecting updated source code files into the running Dart VM",
+        "Stateful: App state is retained after a reload.",
+        "Quickly iterate on a screen deeply nested in your app",
+      ],
     );
   }
 }
