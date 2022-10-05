@@ -1,10 +1,7 @@
 import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_talks/base/base1.dart';
-import 'package:flutter_talks/base/base3.dart';
 import 'package:flutter_talks/sizes.dart';
-import 'package:flutter_talks/widgets.dart';
 import 'dart:html' as html;
 
 import '../base/base2.dart';
@@ -22,7 +19,7 @@ class _AppDetailed1State extends State<AppDetailed1> {
   @override
   Widget build(BuildContext context) {
     return Base6(
-      image: "assets/images/screen1.png",
+      image: "assets/images/screen1.jpg",
       child: Text(
           "What do you see here?",
           style: Theme.of(context).textTheme.displayMedium?.copyWith(
