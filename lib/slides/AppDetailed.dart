@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_talks/base/base1.dart';
 import 'package:flutter_talks/base/base3.dart';
@@ -7,6 +9,7 @@ import 'dart:html' as html;
 
 import '../base/base2.dart';
 import '../base/base6.dart';
+import '../slideSelector.dart';
 
 class AppDetailed1 extends StatefulWidget {
   const AppDetailed1({Key? key}) : super(key: key);
@@ -97,15 +100,42 @@ class AppDetailed3 extends StatefulWidget {
 class _AppDetailed3State extends State<AppDetailed3> {
   @override
   Widget build(BuildContext context) {
-    return Base6(
-      head: "High-velocity development",
-      image: "assets/images/screen1.png",
-      child: Text(
-        "What do you see here?",
-        style: Theme.of(context).textTheme.displayMedium?.copyWith(
-            color: Colors.white,
-            fontSize: 55
-        ),
+    return SlideSelector(
+      child: Scaffold(
+          floatingActionButton: FloatingActionButton.large(
+            onPressed: (){
+              window.open('https://flutter.dev', 'new tab');
+            },
+            child: const FlutterLogo(
+              size: 50,
+            ),
+          ),
+
+          body: SizedBox(
+            height: screenHeight(context),
+            width: screenWidth(context),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Expanded(
+                  child: Image.asset(
+                    "assets/images/screen3.png",
+                    //fit: BoxFit.fitHeight,
+                    //height: screenHeight(context),
+                  ),
+                ),
+                Expanded(
+                  child: Image.asset(
+                    "assets/images/screen4.png",
+                    //fit: BoxFit.fitHeight,
+                    //height: screenHeight(context),
+                  ),
+                ),
+
+              ],
+            ),
+          )
       ),
     );
   }
