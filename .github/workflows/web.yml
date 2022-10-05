@@ -2,7 +2,7 @@ name: Talks-Pages
 
 on:
   push:
-    branches: [master]
+    branches: [stable]
 
 jobs:
   build:

@@ -49,7 +49,7 @@ class _QuesState extends State<Ques> {
         SizedBox(
           height: screenHeight(context, mulBy: 0.3),
         ),
-        Align(
+        const Align(
           alignment: Alignment.bottomCenter,
           child: Text(
             "Made using Flutter with 💙",
