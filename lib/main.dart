@@ -55,7 +55,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Talks',
       debugShowCheckedModeBanner: false,
       navigatorObservers: <NavigatorObserver>[observer],
       theme: themeNotifier.getTheme(),
