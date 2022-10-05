@@ -9,7 +9,7 @@ import '../widgets.dart';
 
 
 class Base6 extends StatelessWidget {
-  const Base6({Key? key, this.children, required this.head, this.image, this.child}) : super(key: key);
+  const Base6({Key? key, this.children, this.head, this.image, this.child}) : super(key: key);
 
   final List<Widget>? children;
   final String? head, image;
@@ -44,7 +44,10 @@ class Base6 extends StatelessWidget {
                   children: [
                     Text(
                     head!,
-                    style: Theme.of(context).textTheme.displayMedium
+                      style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                          color: Colors.white,
+                          fontSize: 48
+                      ),
                 ),
                 SizedBox(
                   height: screenHeight(context, mulBy: 0.01),
