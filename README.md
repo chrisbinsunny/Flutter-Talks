@@ -1,6 +1,6 @@
 # flutter_talks
 
-Building beautiful native apps in record time
+Of the devs, by the devs and for the devs
 
 ## Getting Started
 
