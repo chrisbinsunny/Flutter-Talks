@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -14,7 +15,7 @@ class SlideSelector extends StatelessWidget {
     return RawKeyboardListener(
         autofocus: true,
         focusNode: FocusNode(),
-        onKey: (event) {
+        onKey: (event) async {
           Provider.of<Slide>(context, listen: false).setSlideNo(
             int.parse(
               ModalRoute.of(context)?.settings.name?.replaceAll("/slide", "")??"1",
@@ -24,12 +25,21 @@ class SlideSelector extends StatelessWidget {
           if (event.isKeyPressed(LogicalKeyboardKey.arrowLeft)) {
             Provider.of<Slide>(context, listen: false).decSlideNo();
             Navigator.of(context)
-                .pushReplacementNamed("/slide${slide.getSlideNo}");
+                .pushReplacementNamed("/slide${slide.getSlideNo}", );
+            await FirebaseAnalytics.instance
+                .setCurrentScreen(
+                screenName: ModalRoute.of(context)?.settings.name?.replaceAll("/", "")
+            );
           }
+
           if (event.isKeyPressed(LogicalKeyboardKey.arrowRight)) {
             Provider.of<Slide>(context, listen: false).incSlideNo();
             Navigator.of(context)
                 .pushReplacementNamed("/slide${slide.getSlideNo}");
+            await FirebaseAnalytics.instance
+                .setCurrentScreen(
+                screenName: ModalRoute.of(context)?.settings.name?.replaceAll("/", "")
+            );
           }
         },
         child: child);
