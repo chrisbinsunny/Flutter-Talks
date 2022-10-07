@@ -19,16 +19,26 @@ class _ResourcesState extends State<Resources> {
   Widget build(BuildContext context) {
     return Base3(
       head: "Useful Flutter Resources",
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Image.asset(
-            "assets/gif/ui2.gif",
-          ),
-          Image.asset(
-            "assets/gif/ui3.gif",
-          )
-        ],
+      child: Center(
+        child: RichText(
+          textAlign: TextAlign.center,
+            text: TextSpan(
+                text: "Happy\n",
+                style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                  color: Colors.white,
+                    //fontStyle: FontStyle.italic
+                ),
+                children: [
+                  TextSpan(
+                      text:"Learning..",
+                      style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                          color: Colors.white,
+                        fontStyle: FontStyle.italic
+                      )
+                  )
+                ]
+            ),
+        ),
       ),
       children: [
         TextButton(
