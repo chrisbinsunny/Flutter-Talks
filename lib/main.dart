@@ -93,7 +93,7 @@ class MyApp extends StatelessWidget {
         '/slide29': (context) => const Resources(),
         '/slide30': (context) => const Ques(),
       },
-      initialRoute: "/slide29",
+      initialRoute: "/slide1",
       //home: const SlideSelector(),
     );
   }
