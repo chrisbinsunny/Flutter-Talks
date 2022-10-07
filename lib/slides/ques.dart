@@ -47,7 +47,7 @@ class _QuesState extends State<Ques> {
           ),
         ),
         SizedBox(
-          height: screenHeight(context, mulBy: 0.3),
+          height: screenHeight(context, mulBy: 0.29),
         ),
         const Align(
           alignment: Alignment.bottomCenter,
@@ -56,6 +56,44 @@ class _QuesState extends State<Ques> {
             style: TextStyle(
               color: Colors.white
             ),
+          ),
+        ),
+        SizedBox(
+          height: screenHeight(context, mulBy: 0.01),
+        ),
+         Align(
+          alignment: Alignment.bottomCenter,
+          child: TextButton(
+            onPressed: (){
+              html.window.open('https://github.com/chrisbinsunny/Flutter-Talks', 'new tab');
+            },
+            style: ButtonStyle(
+                alignment: Alignment.centerLeft
+            ),
+
+            child:  RichText(
+                text: const TextSpan(
+                    text: "Find the code ",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white
+                    ),
+                    children: [
+                      TextSpan(
+                          text:"here",
+                          style: TextStyle(
+                              color: Colors.blueGrey,
+                              decoration: TextDecoration.underline
+                          )
+                      ),
+                      TextSpan(
+                          text:" | ⭐ the repo",
+                        style: TextStyle(
+                            color: Colors.white
+                        ),
+                      )
+                    ]
+                )),
           ),
         ),
       ],

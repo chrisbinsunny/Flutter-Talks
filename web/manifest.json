@@ -1,11 +1,11 @@
 {
-    "name": "flutter_talks",
-    "short_name": "flutter_talks",
+    "name": "Flutter Talks by Chrisbin Sunny",
+    "short_name": "Flutter Talks",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Building beautiful native apps in record time",
+    "description": "Of the devs, by the devs and for the devs",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
