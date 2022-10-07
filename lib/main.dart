@@ -11,6 +11,7 @@ import 'package:flutter_talks/slides/hotReloadHead.dart';
 import 'package:flutter_talks/slides/keyComponent.dart';
 import 'package:flutter_talks/slides/popularTools.dart';
 import 'package:flutter_talks/slides/ques.dart';
+import 'package:flutter_talks/slides/resources.dart';
 import 'package:flutter_talks/slides/slide1.dart';
 import 'package:flutter_talks/slides/slide10.dart';
 import 'package:flutter_talks/slides/slide2.dart';
@@ -87,11 +88,12 @@ class MyApp extends StatelessWidget {
         '/slide24': (context) => const Stateless(),
         '/slide25': (context) => const Stateful(),   
         '/slide26': (context) => const HotReloadHead(),
-        '/slide28': (context) => const HotReload(),
         '/slide27': (context) => const HotReloadExplained(),
-        '/slide29': (context) => const Ques(),
+        '/slide28': (context) => const HotReload(),
+        '/slide29': (context) => const Resources(),
+        '/slide30': (context) => const Ques(),
       },
-      initialRoute: "/slide1",
+      initialRoute: "/slide29",
       //home: const SlideSelector(),
     );
   }
