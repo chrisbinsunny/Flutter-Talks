@@ -33,7 +33,15 @@ class Base5 extends StatelessWidget {
               ),
             ),
           ),
-        body: ListView.separated(
+        body: Center(
+            child: SizedBox(
+                width: screenWidth(context),
+                child: AspectRatio(
+                    aspectRatio: 16/9,
+                    child: FittedBox(
+                        fit: BoxFit.contain,
+                        alignment: Alignment.centerLeft,
+                        child: ListView.separated(
           padding: EdgeInsets.only(
               right: screenWidth(context, mulBy: 0.05),
               left:  screenWidth(context, mulBy: 0.05),
@@ -50,7 +58,7 @@ class Base5 extends StatelessWidget {
             );
           },
           itemCount: children.length,
-        ),
+        ))))),
       ),
     );
   }
