@@ -27,7 +27,15 @@ class Base2 extends StatelessWidget {
           ),
         ),
 
-        body: SingleChildScrollView(
+        body: Center(
+    child: SizedBox(
+    width: screenWidth(context),
+    child: AspectRatio(
+    aspectRatio: 16/9,
+    child: FittedBox(
+    fit: BoxFit.contain,
+    alignment: Alignment.centerLeft,
+    child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.symmetric(
               horizontal: screenWidth(context, mulBy: 0.05),
@@ -52,7 +60,7 @@ class Base2 extends StatelessWidget {
               ],
             ),
           ),
-        )
+        ),),),),)
       ),
     );
   }
