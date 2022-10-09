@@ -24,16 +24,26 @@ class Base1 extends StatelessWidget {
           ),
         ),
 
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: screenWidth(context, mulBy: 0.05),
-              vertical: screenHeight(context, mulBy: 0.08)
-          ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: children,
+        body: Center(
+          child: SizedBox(
+            width: screenWidth(context),
+            child: AspectRatio(
+              aspectRatio: 16/9,
+              child: FittedBox(
+                fit: BoxFit.contain,
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: screenWidth(context, mulBy: 0.05),
+                    vertical: screenHeight(context, mulBy: 0.08)
+                ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: children,
+                  ),
+                ),
+              ),
             ),
           ),
         )
