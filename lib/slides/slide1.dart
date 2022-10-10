@@ -32,62 +32,59 @@ class _Slide1State extends State<Slide1> {
         SizedBox(
           height: screenHeight(context, mulBy: 0.15),
         ),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Container(
-                height: 300,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  boxShadow: const [
-                    BoxShadow(
-                        color: Colors.black38,
-                        blurRadius: 10,
-                        spreadRadius: 5,
-                        offset: Offset(0, 3)
-                    )
-                  ],
-                ),
-                clipBehavior: Clip.antiAlias,
-                child: Image.asset(
-                  "assets/chrisbin.jpg",
-                ),
-              ),
-              SizedBox(
-                width: screenWidth(context, mulBy: 0.02),
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                      "Chrisbin Sunny",
-                      style: Theme.of(context).textTheme.displaySmall
-                  ),
-                  TextButton(
-                      onPressed: (){
-                        html.window.open('https://bio.link/chrisbin', 'new tab');
-                      },
-                      style: ButtonStyle(
-                        padding: MaterialStateProperty.all(
-                          EdgeInsets.zero,
-                        ),
-                      ),
-                      child: Text(
-                          "bio.link/chrisbin",
-                        style: Theme.of(context).textTheme.displaySmall?.copyWith(
-                            color: Colors.blueGrey,
-                          fontSize: 25
-                        ),
-
-                  ))
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Container(
+              height: 300,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(40),
+                boxShadow: const [
+                  BoxShadow(
+                      color: Colors.black38,
+                      blurRadius: 10,
+                      spreadRadius: 5,
+                      offset: Offset(0, 3)
+                  )
                 ],
               ),
-            ],
-          ),
+              clipBehavior: Clip.antiAlias,
+              child: Image.asset(
+                "assets/chrisbin.jpg",
+              ),
+            ),
+            SizedBox(
+              width: screenWidth(context, mulBy: 0.02),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                    "Chrisbin Sunny",
+                    style: Theme.of(context).textTheme.displaySmall
+                ),
+                TextButton(
+                    onPressed: (){
+                      html.window.open('https://bio.link/chrisbin', 'new tab');
+                    },
+                    style: ButtonStyle(
+                      padding: MaterialStateProperty.all(
+                        EdgeInsets.zero,
+                      ),
+                    ),
+                    child: Text(
+                        "bio.link/chrisbin",
+                      style: Theme.of(context).textTheme.displaySmall?.copyWith(
+                          color: Colors.blueGrey,
+                        fontSize: 25
+                      ),
+
+                ))
+              ],
+            ),
+          ],
         )
       ],
     );
