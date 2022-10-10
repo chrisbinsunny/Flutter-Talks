@@ -28,7 +28,12 @@ class Base6 extends StatelessWidget {
           ),
         ),
 
-        body: Row(
+        body: Center(
+            child: SizedBox(
+                width: screenWidth(context),
+                child: AspectRatio(
+                    aspectRatio: 16/9,
+                    child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
@@ -38,16 +43,16 @@ class Base6 extends StatelessWidget {
                 alignment: Alignment.center,
                 padding: EdgeInsets.symmetric(
                     horizontal: screenWidth(context, mulBy: 0.05),
-                    vertical: screenHeight(context, mulBy: 0.08)
+                    vertical: screenHeight(context, mulBy: 0.00)
                 ),
                 child: child??ListView(
                   children: [
                     Text(
                     head!,
-                      style: Theme.of(context).textTheme.displayMedium?.copyWith(
-                          color: Colors.white,
-                          fontSize: 48
-                      ),
+                    style: Theme.of(context).textTheme.displayMedium?.copyWith(
+                        color: Colors.white,
+                        fontSize: 48
+                    ),
                 ),
                 SizedBox(
                   height: screenHeight(context, mulBy: 0.01),
@@ -56,7 +61,7 @@ class Base6 extends StatelessWidget {
                     alignment:Alignment.topLeft,
                     child: underline()),
                     SizedBox(
-                      height: screenHeight(context, mulBy: 0.1),
+                    height: screenHeight(context, mulBy: 0.1),
                     ),
                     ...children!
                   ],
@@ -70,7 +75,7 @@ class Base6 extends StatelessWidget {
             ),
 
           ],
-        )
+        ))))
       ),
     );
   }
