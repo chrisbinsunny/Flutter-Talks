@@ -21,18 +21,18 @@ class _Slide2State extends State<Slide2> {
       head: "Flutter is Google’s UI Framework",
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              width: screenWidth(context, mulBy: 0.4),
+              width: screenWidth(context, mulBy: 0.5),
               child: Text(
                   "Helping developers craft high-quality native experiences across multiple platforms in record time.",
                   style: Theme.of(context).textTheme.bodyMedium
               ),
             ),
             Container(
-              width: screenWidth(context, mulBy: 0.4),
+              //width: screenWidth(context, mulBy: 0.4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
                 boxShadow: const [
